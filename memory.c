@@ -7,6 +7,11 @@ extern void *__libc_calloc(size_t nmemb, size_t size);
 extern void *__libc_realloc(void *ptr, size_t size);
 extern void *__libc_free(void *ptr);
 
+#undef malloc
+#undef calloc
+#undef realloc
+#undef free
+
 static void *my_malloc_hook(size_t size, const void *caller);
 static void *my_calloc_hook(size_t nmemb, size_t size, const void *caller);
 static void *my_realloc_hook(void * ptr, size_t size, const void *caller);
