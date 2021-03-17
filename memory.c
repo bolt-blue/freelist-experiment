@@ -120,7 +120,7 @@ void * pop_ptr_ref(void *system)
         if (g_ptr_refs.array[i].system == system)
         {
             ret = g_ptr_refs.array[i].internal;
-            g_ptr_refs.array[i] = g_ptr_refs.array[g_ptr_refs.count];
+            g_ptr_refs.array[i] = g_ptr_refs.array[g_ptr_refs.count - 1];
             g_ptr_refs.count--;
             break;
         }
