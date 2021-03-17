@@ -5,7 +5,7 @@ malloc hook LD_PRELOAD experiment - not to be taken seriously.
 The following should be enough to compile and witness the breakage (before reaching `main`):
 ```bash
 $> make
-$> LD_PRELOAD=./malloc.so /bin/ls -l
+$> LD_PRELOAD=./malloc.so /bin/ls -l > dump
 ```
 
 ## Disclaimer
